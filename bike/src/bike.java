@@ -1,9 +1,47 @@
 import java.util.Scanner;
 
-class bike{
+class bank{
     public static void main(String[] args) {
-        Scanner car = new Scanner(System.in);
-        String moose = car.nextLine();
-        System.out.println(moose);
+      Scanner sc = new Scanner(System.in);
+        System.out.println(" 1  for cash withdraw");
+        System.out.println("2  for  deposit ");
+        System.out.println("3 for balance check ");
+        System.out.println("4 to exist");
+        int balance = 5000, withdraw, deposit, total;
+
+        int a;
+         a = sc.nextInt();
+         switch (a){
+             case 1:
+                 System.out.println("enter the amount you want to withdraw");
+                 withdraw = sc.nextInt();
+                 if (withdraw<(balance-500)&& (withdraw-balance>=500)) {
+                     total = balance - withdraw;
+                     System.out.println("your remainting balance is " + total);
+                 }
+                else if ((withdraw<balance) && (withdraw-balance>=500)){
+                     System.out.println("You must have 500 in your account");
+                 } else {
+                     total= withdraw-balance;
+                     System.out.println("you are missing "+ total );
+                 }
+                 break;
+             case 2:
+                 System.out.println("men");
+                 break;
+             case 3:
+                 System.out.println("men");
+
+                 break;
+             case 4:
+                 System.out.println("men");
+
+                 break;
+
+             default:
+
+         }
+
+
     }
 }
