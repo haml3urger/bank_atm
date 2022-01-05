@@ -15,10 +15,10 @@ class bank{
             case 1 -> {
                 System.out.println("enter the amount you want to withdraw");
                 withdraw = sc.nextInt();
-                if (withdraw < (balance - 500) && (balance-withdraw > 500)) {
+                if (withdraw <=(balance - 500) ) {
                     total = balance - withdraw;
                     System.out.println("your remainting balance is " + total);
-                } else if ((withdraw < balance) && (balance-withdraw > 500)) {
+                } else if ((balance- withdraw) <500) {
                     System.out.println("You must have 500 in your account");
                 } else if (withdraw>balance){
                     total = withdraw -balance;
